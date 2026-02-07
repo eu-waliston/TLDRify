@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "TLDRify — Resumo Automático de Artigos",
+    "version": "1.0",
+    "description": "TLDRify é uma extensão para navegadores que extrai e resume automaticamente artigos da web, ajudando você a entender conteúdos longos de forma rápida, clara e objetiva.",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup_html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
