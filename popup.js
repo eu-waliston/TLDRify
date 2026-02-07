@@ -2,16 +2,14 @@ import { cleanText } from "./utils/textCleaner.js";
 import { summarize } from "./utils/summarizer.js";
 
 document.getElementById("summarize").onclick = async () => {
-    const [ tab ] = await chrome.tabs.query({ active: true, currentWindows: true});
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  const mode = document.getElementById("mode").value;
 
-    const mods = document.getElementById("mods").value
+  chrome.tabs.sendMessage(tab.id, { action: "EXTRACT_TEXT" }, (res) => {
+    const text = cleanText(res.text);
+    const summary = summarize(text, Number(mode));
+    document.getElementById("result").innerText = summary;
+  });
+};
 
-    chrome.tabs.sendMessage(tad.id, {action: "EXTRACT_TEXT"}, (res) => {
-        const text = cleanText(res.text);
-        const summary = summarize(text, Number(mode));
-        document.getElementById("result").innerText = summary;
-    })
-
-
-    chrome.storage.local.set({ lastSummary: summary });
-}
+chrome.storage.local.set({ lastSummary: summary });

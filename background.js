@@ -5,7 +5,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponses) => {
     if (request.type === 'SUMMARIZE_TEXT') {
         const { text, level } = request;
 
-        // no futuro: IA aqui 🤖
         const summary = summarizeLocally(text, level);
 
         chrome.storage.local.set({ lastSummary: summary });
@@ -18,13 +17,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponses) => {
 })
 
 chrome.runtime.onMessage.addListener(async (req, sender, sendResponse) => {
-   if (req.type === "AI_SUMMARY") {
+  if (req.type === "AI_SUMMARY") {
     const result = await callAI(req.text, req.mode);
-    sendResponse({ summary: result })
-   }
-
-   return true;
-})
+    sendResponse({ summary: result });
+  }
+  return true;
+});
 
 function summarizeLocally(text, level) {
     const sentences = text.match(/[^.!?]+[.!?]/g) || [];

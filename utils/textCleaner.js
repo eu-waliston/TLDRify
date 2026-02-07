@@ -1,6 +1,6 @@
 export function cleanText(text) {
-    return text
-        .repalce(/\n+/g, " ")
-        .repalce(/\s+/g, " ")
-        .trim()
+  return text
+    .replace(/\n+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
