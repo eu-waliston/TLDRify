@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TLDRify — Copiloto de Leitura</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #111827;
+      --text: #eaeaea;
+      --muted: #9ca3af;
+      --accent: #7c7cff;
+      --border: #1f2937;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-top: 12px;
+    }
+
+    .cta {
+      margin-top: 28px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 22px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(124,124,255,.3);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-bottom: 80px;
+    }
+
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .how {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .how h2 {
+      font-size: 2rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .step {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>TLDRify</h1>
+      <p>Copiloto de leitura que transforma artigos longos em conhecimento claro.</p>
+      <div class="cta">
+        <a href="#">Adicionar ao Chrome</a>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="feature">
+        <h3>🧠 Resumos inteligentes</h3>
+        <p>Transforme textos longos em resumos claros com um clique.</p>
+      </div>
+      <div class="feature">
+        <h3>🎯 Modos de leitura</h3>
+        <p>Bullet points, perguntas, acadêmico ou casual.</p>
+      </div>
+      <div class="feature">
+        <h3>⭐ Favoritos & histórico</h3>
+        <p>Guarde o que importa, organizado por site.</p>
+      </div>
+      <div class="feature">
+        <h3>📄 Exportação</h3>
+        <p>Baixe seus resumos em texto ou PDF.</p>
+      </div>
+    </section>
+
+    <section class="how">
+      <h2>Como funciona</h2>
+      <div class="steps">
+        <div class="step">1️⃣ Abra um artigo</div>
+        <div class="step">2️⃣ Clique no TLDRify</div>
+        <div class="step">3️⃣ Escolha o formato</div>
+        <div class="step">4️⃣ Leia só o essencial ✨</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Feito com 🧠 e ☕ • <a href="https://github.com/eu-waliston/tldrify" target="_blank">GitHub</a></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
