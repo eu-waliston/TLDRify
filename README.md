@@ -1,6 +1,8 @@
 # 🧠 TLDRify — Resumo Automático de Artigos
 
-TLDRify é uma extensão para navegadores que **extrai e resume automaticamente artigos da web**, ajudando você a entender conteúdos longos de forma rápida, clara e objetiva.
+ Criei uma extensão que extrai, analisa e resume artigos automaticamente usando JavaScript, NLP básico e arquitetura modular, eu vos aprezento: .
+
+**TLDRify** é uma extensão para navegadores que **extrai e resume automaticamente artigos da web**, ajudando você a entender conteúdos longos de forma rápida, clara e objetiva.
 
 Ideal para estudantes, pesquisadores e curiosos que querem **menos rolagem e mais compreensão**.
 
